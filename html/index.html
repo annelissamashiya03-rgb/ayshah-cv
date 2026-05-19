@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <link rel="stylesheet" href="/css/index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My CV</title>
+</head>
+
+<body>
+
+  <main>
+
+    <section class="slide active">
+
+      <article class="center-content">
+
+        <header>
+		<img src="Ayshah.png" alt="Profile Picture" width="280">
+          <h1>AYSHAH ANNELISSA MASHIYA</h1>
+          <h2>Systems Development Student</h2>
+
+        <p>
+          Passionate and hardworking Systems Development student seeking entry-level posistion to apply technical knowledge in the tech industry.
+          Eager to contribute to a dynamic team, optimise system performance and gain hands-on professional experience.
+        </p>
+         </header>
+      </article>
+
+    </section>
+
+    <section class="slide">
+
+      <header>
+        <h1>Contact Information</h1>
+      </header>
+
+      <address>
+        <p>
+          <strong>Email:</strong>
+          annelissamashiya03@gmail.com
+        </p>
+
+        <p>
+          <strong>Phone:</strong>
+          +27 78 721 2256
+        </p>
+
+        <p>
+          <strong>Location:</strong>
+          2356 Mbusi Street
+          Moleleki Ext 3 Katlehong 1431
+        </p>
+      </address>
+
+    </section>
+
+    <section class="slide">
+
+      <header>
+        <h1>Education</h1>
+      </header>
+
+      <article>
+        <h2>Systems Development NQF Level 4</h2>
+
+        <p>Dynamic DNA, Randburg</p>
+        <p>2026 - In Progress</p>
+      </article>
+
+      <br><br>
+
+      <article>
+        <h2>Grade 12</h2>
+
+        <p>O.R Tambo Secondary School</p>
+        <p>2022</p>
+      </article>
+
+    </section>
+
+    <section class="slide">
+
+      <header>
+        <h1>Skills</h1>
+      </header>
+
+      <article>
+        <ul>
+          <li>Introduction to HTML</li>
+          <li>Introduction to CSS</li>
+          <li>Introduction to C#</li>
+          <li>JavaScript</li>
+          <li>SCRUM</li>
+          <li>GitHub</li>
+          <li>Communication Skills</li>
+          <li>Computer Literate</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <section class="slide">
+
+      <header>
+        <h1>Languages</h1>
+      </header>
+
+      <article>
+        <ul>
+          <li>English</li>
+          <li>IsiZulu</li>
+          <li>XiTsonga</li>
+        </ul>
+      </article>
+
+    </section>
+
+   
+    <section class="slide">
+
+      <header>
+        <h1>Certificates</h1>
+      </header>
+
+      <article>
+
+        <h2>
+          Use a Graphic User Interface (GUI) Based Word Processor
+          To Create And Edit Documents
+        </h2>
+
+        <p>
+          Strategic Skills Development Specialist
+        </p>
+
+      </article>
+
+    </section>
+
+    <footer>
+
+      <button onclick="changeSlide(-1)">
+        Previous
+      </button>
+
+      <button onclick="changeSlide(1)">
+        Next
+      </button>
+
+    </footer>
+
+  </main>
+
+  <script>
+
+    let slideIndex = 0;
+
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index){
+
+      slides.forEach(slide => {
+        slide.classList.remove("active");
+      });
+
+      if(index >= slides.length){
+        slideIndex = 0;
+      }
+
+      if(index < 0){
+        slideIndex = slides.length - 1;
+      }
+
+      slides[slideIndex].classList.add("active");
+    }
+
+    function changeSlide(number){
+
+      slideIndex += number;
+
+      showSlide(slideIndex);
+    }
+
+  </script>
+
+</body>
+</html>
